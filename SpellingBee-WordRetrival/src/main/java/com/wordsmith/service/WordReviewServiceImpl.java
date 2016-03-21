@@ -1,5 +1,7 @@
 package com.wordsmith.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,14 +21,14 @@ public class WordReviewServiceImpl  implements WordReviewService {
 	
 
 	@Override
-	public void reviewWord(Word word) {
+	public void setDiffilevel(List<Word> word) {
 		// TODO Auto-generated method stub
-		wordReviewDao.reviewWord(word);
+		wordReviewDao.setDiffilevel(word);
 	}
 	
 
 	@Override
-	public Word retrieveWord() {
+	public List<Word> retrieveWord() {
 		System.out.println("in WordRetrieveServiceImpl retrieveWord method");
 		return wordReviewDao.retrieveWord();
 		

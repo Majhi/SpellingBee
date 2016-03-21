@@ -1,16 +1,13 @@
 package com.wordsmith.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
+import java.util.List;
 
 import com.wordsmith.domain.Word;
 
 public interface WordReviewService {
 	
 	
-	public void reviewWord(Word word);
+	public void setDiffilevel(List<Word> word);
 	
-	public Word retrieveWord();
-	
-
+	public List<Word> retrieveWord();
 }

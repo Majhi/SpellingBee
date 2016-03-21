@@ -1,5 +1,7 @@
 package com.wordsmith.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,7 +22,7 @@ public class WordsReviewController {
 
 	
 	@RequestMapping(value="/wordRetrival", method = RequestMethod.GET)
-	public @ResponseBody Word uploadRetrival(){
+	public @ResponseBody List<Word> uploadRetrival(){
 		//Word word =new Word();
 		//word.setId(id);
 		//System.out.println("to test"+id);
@@ -29,12 +31,12 @@ public class WordsReviewController {
 	}
 	
 	@RequestMapping(value="/setDiffLevel", method = RequestMethod.POST)
-	public @ResponseBody String setDiffLevel(@RequestBody Word word  ){
+	public @ResponseBody String setDiffLevel(@RequestBody List<Word> word  ){
 		
 		//word.setId(id);
-		System.out.println("to test"+word.getId());
-		System.out.println("in WordsRetrivalController / setDiffLevel method");
-		wordReviewService.reviewWord(word);
+		/*System.out.println("to test"+word.getId());
+		System.out.println("in WordsRetrivalController / setDiffLevel method");*/
+		wordReviewService.setDiffilevel(word);
 		return "Difficulty Level is set for Words !!";
 	}
 }

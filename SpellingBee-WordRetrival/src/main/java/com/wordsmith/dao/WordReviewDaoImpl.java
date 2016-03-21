@@ -1,5 +1,8 @@
 package com.wordsmith.dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.wordsmith.domain.Word;
@@ -8,29 +11,29 @@ import com.wordsmith.domain.Word;
 public class WordReviewDaoImpl implements WordReviewDao {
 
 
+	
 	@Override
-	public void reviewWord(Word word) {
-		// TODO Auto-generated method stub
+	public void  setDiffilevel(List<Word> word){
 		// -- Call the DB stuff to save
-				System.out.println(" reviewWord word");
-				System.out.println("in reviewWord word getId"+word.getId());
-		
+		System.out.println(" WordUploadDaoImpl word");
+		System.out.println("in WordUploadDaoImpl word getId"+word.get(0).getId());
+		// wordRepository.save(word);
 	}
 	
 	@Override
-	public Word retrieveWord() {
-		//Call the DB to get the word based on Id;
-		/*System.out.println("in WordRetrieveDaoImpl retrieveWord method");
-		Word word = new Word("1","School","Bhaskar" );
-		//word.getId(id);
-		word.getId();
-		word.getActualWord();
-		word.getWordUploadedBy();
-		System.out.println("word.getId()>>"+word.getId()+
-				"word.getActualWord()>>>"+word.getActualWord()+
-				"word.getWordUploadedBy()>>>"+word.getWordUploadedBy());
-		*/
-		return new Word();
+	public List<Word>  retrieveWord() {
+		
+		List<Word> words= new ArrayList<Word>();
+		
+		Word w = new Word();
+		w.setActualWord("STUDENT");
+		words.add(w);
+		
+		Word w2 = new Word();
+		w2.setActualWord("EXCELLENT");
+		words.add(w2);
+		
+		return  words;
 	}
 
 }
