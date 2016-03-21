@@ -1,6 +1,8 @@
 package com.wordsmith.dao;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -19,10 +21,10 @@ public class WordUploadDaoImpl implements WordUploadDao {
 	private WordRepository wordRepository;*/
 	 
 		@Override
-		public void uploadWord(Word word) {
+		public void uploadWord(List<Word> word) {
 		// -- Call the DB stuff to save
 		System.out.println(" WordUploadDaoImpl word");
-		System.out.println("in WordUploadDaoImpl word getId"+word.getId());
+		System.out.println("in WordUploadDaoImpl word getId"+word.get(0).getId());
 		// wordRepository.save(word);
 	}
 

@@ -28,25 +28,11 @@ public class WordsUploadController {
 	@RequestMapping(value="/wordUpload", method = RequestMethod.POST)
 	public ResponseEntity<List<Word>>  uploadWord(@RequestBody List<Word> word ){
 		
-		wordUploadService.uploadWord(word.get(0)); 
+		wordUploadService.uploadWord(word); 
 		
 		return new ResponseEntity <List<Word>>(word, HttpStatus.OK);
 		
 	}
-	/*public @ResponseBody String uploadWord(@RequestBody Word  lst ){
-		Word word =new Word();
-		word.setId(id);
-		word.setActualWord(actualWord);
-		word.setWordUploadedBy(wordUploadedBy);
-		System.out.println("to test id"+word.getId());
-		System.out.println("to test actualWord"+word.getActualWord());
-		wordUploadService.uploadWord(word);
-			System.out.println("word=== "+lst.getActualWord());
-	return "Word Uploaded !!";
-	}*/
-	
-	
-	   
 	
 	
 	public void storeWords(){

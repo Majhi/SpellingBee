@@ -1,5 +1,7 @@
 package com.wordsmith.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,11 +18,13 @@ public class WordUploadServiceImpl  implements WordUploadService {
 	WordUploadDao wordupldDao;
 
 	@Override
-	public void uploadWord(Word word) {
+	public void uploadWord(List<Word> word) {
 		// TODO Auto-generated method stub
 		wordupldDao.uploadWord(word);
 		
 	}
+
+	
 	
 
 }
