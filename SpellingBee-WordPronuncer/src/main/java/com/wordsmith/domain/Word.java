@@ -9,9 +9,26 @@ public class Word implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private String id;
 	private String actualWord;
-	private String wordUploadedBy;
+	private String prouncerWord;
+	private String status;
 	      
-    public String getActualWord() {
+    public String getProuncerWord() {
+		return prouncerWord;
+	}
+
+	public void setProuncerWord(String prouncerWord) {
+		this.prouncerWord = prouncerWord;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getActualWord() {
 		return actualWord;
 	}
 
@@ -19,13 +36,6 @@ public class Word implements Serializable{
 		this.actualWord = actualWord;
 	}
 
-	public String getWordUploadedBy() {
-		return wordUploadedBy;
-	}
-
-	public void setWordUploadedBy(String wordUploadedBy) {
-		this.wordUploadedBy = wordUploadedBy;
-	}
 
 /*	public Word(String id, String actualWord, String  wordUploadedBy) {
         this.id = id;
@@ -86,8 +96,8 @@ public class Word implements Serializable{
 	@Override
     public String toString() {
         return String.format(
-                "Word[id=%s, actualWord='%s', wordUploadedBy='%s']",
-                id, actualWord, wordUploadedBy);
+                "Word[id=%s, actualWord='%s', prouncerWord='%s']",
+                id, actualWord, prouncerWord);
     }
 	
 }
