@@ -28,13 +28,13 @@ public class WordsProuncerController {
 		return "Difficulty Level is set for Words !!";
 	}
 	
-	@RequestMapping(value="/wordRetrival", method = RequestMethod.GET)
-	public @ResponseBody List<Word> uploadRetrival(){
+	@RequestMapping(value="/pronouncerWordRetrival", method = RequestMethod.GET)
+	public @ResponseBody List<Word> pronouncerWordRetrival(){
 		//Word word =new Word();
 		//word.setId(id);
 		//System.out.println("to test"+id);
 		System.out.println("in WordsRetrivalController / wordRetrival method");
-		return wordProuncerService.retrieveWord();
+		return wordProuncerService.pronouncerWordRetrival();
 	}
 	
 	

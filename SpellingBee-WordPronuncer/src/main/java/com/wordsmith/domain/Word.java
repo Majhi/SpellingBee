@@ -1,47 +1,54 @@
 package com.wordsmith.domain;
 
-import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-public class Word implements Serializable{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private String id;
-	private String actualWord;
-	private String prouncerWord;
-	private String status;
-	      
-    public String getProuncerWord() {
-		return prouncerWord;
-	}
+@Entity
+public class Word {
+	 @Id
+	 @GeneratedValue(strategy = GenerationType.AUTO)
+		private String id;
+		private String actualWord;
+		private String prouncerWord;
+		private String difficulty;
+		private String locked;
+		public String getDifficulty() {
+			return difficulty;
+		}
 
-	public void setProuncerWord(String prouncerWord) {
-		this.prouncerWord = prouncerWord;
-	}
 
-	public String getStatus() {
-		return status;
-	}
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
+		public void setDifficulty(String difficulty) {
+			this.difficulty = difficulty;
+		}
 
+
+
+		public String getLocked() {
+			return locked;
+		}
+
+
+
+		public void setLocked(String locked) {
+			this.locked = locked;
+		}
+		private String status;
+		      
+	
 	public String getActualWord() {
 		return actualWord;
 	}
+
+	
 
 	public void setActualWord(String actualWord) {
 		this.actualWord = actualWord;
 	}
 
-
-/*	public Word(String id, String actualWord, String  wordUploadedBy) {
-        this.id = id;
-        this.actualWord = actualWord;
-        this.wordUploadedBy = wordUploadedBy;
-    }*/
+	
 	/*private String actualWord;
     private String wordInsertedByPronouncer;
     private String levelOfDifficulty;
@@ -63,7 +70,33 @@ public class Word implements Serializable{
 */
     
     
-    public String getId() {
+    public String getProuncerWord() {
+		return prouncerWord;
+	}
+
+
+
+	public void setProuncerWord(String prouncerWord) {
+		this.prouncerWord = prouncerWord;
+	}
+
+
+
+	public String getStatus() {
+		return status;
+	}
+
+
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+
+
+
+
+	public String getId() {
 		return id;
 	}
 	public void setId(String id) {
@@ -92,12 +125,12 @@ public class Word implements Serializable{
         this.isLocked= isLocked;
         this.isApproved = isApproved;
     }
-    */
 	@Override
     public String toString() {
         return String.format(
-                "Word[id=%s, actualWord='%s', prouncerWord='%s']",
-                id, actualWord, prouncerWord);
+                "Customer[id=%s, actualWord='%s', wordInsertedByPronouncer='%s', "
+                + "levelOfDifficulty='%s',isLocked='%s',isApproved='%s',]",
+                id, actualWord, wordInsertedByPronouncer, levelOfDifficulty, isLocked, isApproved);
     }
 	
-}
+*/}

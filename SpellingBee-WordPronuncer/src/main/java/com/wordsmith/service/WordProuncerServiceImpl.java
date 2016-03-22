@@ -28,9 +28,9 @@ public class WordProuncerServiceImpl  implements WordProuncerService {
 	
 
 	@Override
-	public List<Word> retrieveWord() {
+	public List<Word> pronouncerWordRetrival() {
 		System.out.println("in WordRetrieveServiceImpl retrieveWord method");
-		return wordProuncerDao.retrieveWord();
+		return wordProuncerDao.pronouncerWordRetrival();
 		
 	}
 }

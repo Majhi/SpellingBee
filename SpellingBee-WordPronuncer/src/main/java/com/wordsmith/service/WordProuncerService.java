@@ -9,5 +9,5 @@ public interface WordProuncerService {
 	
 	public void setProuncerWord(List<Word> word);
 	
-	public List<Word> retrieveWord();
+	public List<Word> pronouncerWordRetrival();
 }
