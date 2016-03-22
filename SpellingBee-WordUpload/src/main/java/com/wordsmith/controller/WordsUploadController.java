@@ -16,28 +16,16 @@ import com.wordsmith.service.WordUploadService;
 
 @Controller
 public class WordsUploadController {
-	
-	
 	@Autowired 
 	WordUploadService wordUploadService;
-
-	
-	/*@RequestParam("id") String id,@RequestParam("actualWord") String actualWord,
-	@RequestParam("wordUploadedBy") String wordUploadedBy*/ 
 	
 	@RequestMapping(value="/wordUpload", method = RequestMethod.POST)
 	public ResponseEntity<List<Word>>  uploadWord(@RequestBody List<Word> word ){
-		
 		wordUploadService.uploadWord(word); 
-		
 		return new ResponseEntity <List<Word>>(word, HttpStatus.OK);
 		
 	}
 	
 	
-	public void storeWords(){
-		
-		
-	}
-
+	
 }

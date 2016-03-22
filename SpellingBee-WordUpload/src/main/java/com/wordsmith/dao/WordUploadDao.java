@@ -6,5 +6,5 @@ import com.wordsmith.domain.Word;
 
 public interface WordUploadDao {
 
-	public void uploadWord(List<Word> word);
+	public boolean uploadWord(List<Word> word);
 }

@@ -9,8 +9,34 @@ import javax.persistence.Id;
 public class Word {
 	 @Id
 	 @GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
-	private String actualWord;
+		private String id;
+		private String actualWord;
+		private String prouncerWord;
+		private String difficulty;
+		private String locked;
+		public String getDifficulty() {
+			return difficulty;
+		}
+
+
+
+		public void setDifficulty(String difficulty) {
+			this.difficulty = difficulty;
+		}
+
+
+
+		public String getLocked() {
+			return locked;
+		}
+
+
+
+		public void setLocked(String locked) {
+			this.locked = locked;
+		}
+		private String status;
+		      
 	
 	public String getActualWord() {
 		return actualWord;
@@ -22,12 +48,7 @@ public class Word {
 		this.actualWord = actualWord;
 	}
 
-	public Word() {}
-
-    public Word(Integer id) {
-        this.id = id;
-        
-    }
+	
 	/*private String actualWord;
     private String wordInsertedByPronouncer;
     private String levelOfDifficulty;
@@ -49,10 +70,36 @@ public class Word {
 */
     
     
-    public Integer getId() {
+    public String getProuncerWord() {
+		return prouncerWord;
+	}
+
+
+
+	public void setProuncerWord(String prouncerWord) {
+		this.prouncerWord = prouncerWord;
+	}
+
+
+
+	public String getStatus() {
+		return status;
+	}
+
+
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+
+
+
+
+	public String getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	/*public String getActualWord() {
